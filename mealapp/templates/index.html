@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} TheMealDB {% endblock %}
+{% block content %}
+    <header>
+        <div class="container">
+            <div class="header_content">
+                <div class="header_text">
+                    <div class="header_img">
+                        <img src="{% static 'IMG/meal-icon.png' %}" alt="">
+                    </div>
+                    <div class="header_title">
+                        <h1 class="title_text">Welcome to TheMealDB</h1>
+                        <p class="title_text">Welcome to TheMealDB: An open, crowd-sourced database of Recipes from
+                            around the world. <br>
+                            We also offer a <span class="title_span"> free JSON API </span> for anyone wanting to use
+                            it, with additional features for subscribers.</p>
+                        <button><span class="btn_pay">Pay</span><span>Pal</span> Subscribe</button>
+                        <p class="title_text">
+                            Click to Support $2 per month (cancel anytime) <br>
+                            Currently 750 supporters</p>
+                    </div>
+                    <div class="header_img">
+                        <img src="{% static 'IMG/meal-icon.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="header_input">
+                    <div class="inp">
+                        <form action="{% url 'search' %}"  method="POST">
+                            {% csrf_token %}
+                            <input type="text" name="search" placeholder="search for the Meal...">
+                            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
+                    </div>
+                    <div class="header_text">
+                        <p> Total Meals: 283 Total Ingredients: 574 Images: 283
+                        </p>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <h1>Latest Meals</h1>
+            <div class="section_cards">
+                <div class="card">
+                    <img width="200px" height="200px" src={{chivito_img}} alt="">
+                    <a href="{% url 'second_site' pk=53063 %}"><p>{{chivito}}</p></a> 
+                </div>
+                <div class="card">
+                    <img src={{walnut_img}} alt="">
+                    <a href="{% url 'second_site' pk=53062 %}"><p>{{walnut}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{fresh_sardines_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53061 %}"><p>{{fresh_sardines}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{burek_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53060 %}"><p>{{burek}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{mashroom_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53059 %}"><p>{{mashroom}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{croatian_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53058 %}"><p>{{croatian}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{t_croatian_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53057 %}"><p>{{t_croatian}}</p></a>
+                </div>
+                <div class="card">
+                    <img src="{{croatian_lamb_img}}" alt="">
+                    <a href="{% url 'second_site' pk=53056 %}"><p>{{croatian_lamb}}</p></a>
+                </div>
+
+                
+            </div>
+            
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="section_popular">
+            <h1>Popular Ingredients</h1>
+            <div class="section_cards">
+                <div class="card">
+                    <img src="https://www.themealdb.com/images/ingredients/Chicken.png" alt="">
+                    <p>Chicken</p>
+                </div>
+                <div class="card">
+                    <img src="https://www.themealdb.com/images/ingredients/Salmon.png" alt="">
+                    <p>Salmon</p>
+                </div>
+                <div class="card">
+                    <img src="https://www.themealdb.com/images/ingredients/Beef.png" alt="">
+                    <p>Beef</p>
+                </div>
+                <div class="card">
+                    <img src="https://www.themealdb.com/images/ingredients/Pork.png" alt="">
+                    <p>Pork</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="random_meals">
+                <h1>Random Meals</h1>
+                <div class="section_cards">
+                    {% for k,l,id in all_total %}
+                    <div class="card">
+                        <img src="{{l}}" alt="">
+                        <a href="{% url 'second_site' pk=id%}"><p>{{k}}</p></a> 
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <div class="Random_ingredients">
+                <h1>Random Ingredients</h1>
+                <div class="section_cards">
+                    {% for d,f in all_total_random_ingridients %}
+                    <div class="card">
+                        <img src="{{d}}" alt="">
+                        <p>{{f}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% endblock %}

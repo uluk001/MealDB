@@ -1,0 +1,387 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #471c05;
+}
+
+nav {
+  background-color: #351503;
+  color: white;
+}
+
+nav .nav_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px;
+}
+
+nav .nav_content .nav_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .nav_content .nav_title img {
+  width: 270px;
+  height: 60px;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0px 15px;
+}
+
+nav ul i {
+  margin: 15px;
+}
+
+nav ul input {
+  width: 120px;
+  height: 35px;
+}
+
+nav ul li:first-child {
+  background-color: red;
+  height: 40px;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header {
+  color: white;
+}
+
+header .header_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px;
+}
+
+header .header_content .header_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .header_content .header_text .header_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header_content .header_text .header_title .title_text {
+  text-align: center;
+}
+
+header .header_content .header_text .header_title .title_text .title_span {
+  color: orange;
+}
+
+header .header_content .header_text .header_title button {
+  width: 200px;
+  height: 35px;
+  margin: 10px 0px;
+  background-color: #f4ac27;
+  font-size: 15px;
+}
+
+header .header_content .header_text .header_title button .btn_pay {
+  color: blue;
+}
+
+header .header_content .header_text .header_title button span {
+  color: #10a6e1;
+}
+
+header .header_content .header_input {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header_content .header_input .inp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+header .header_content .header_input input {
+  width: 220px;
+  height: 30px;
+}
+
+header .header_content .header_input button {
+  width: 50px;
+  height: 30px;
+  border: none;
+}
+
+header .header_content .header_input .header_text p {
+  margin-bottom: 15px;
+}
+
+section h1 {
+  color: white;
+  text-align: center;
+}
+
+section .section_cards {
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section .section_cards .card {
+  width: 300px;
+  height: 430px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+section .section_cards .card img {
+  width: 250px;
+  height: 260px;
+  margin: 20px 20px;
+}
+
+section .section_cards .card p {
+  text-align: center;
+  color: orange;
+}
+
+section .section_cards .card a {
+  text-decoration: none;
+}
+
+section .section_cards .card .remove {
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 9px 26px;
+  background-color: antiquewhite;
+}
+
+.section_popular {
+  border-top: 3px solid white;
+  border-bottom: 3px solid white;
+  padding: 30px 0px;
+}
+
+.random_meals {
+  border-bottom: 3px solid white;
+}
+
+.random_meals h1 {
+  padding-top: 30px;
+}
+
+.Random_ingredients {
+  border-bottom: 3px solid white;
+}
+
+.Random_ingredients h1 {
+  padding: 30px;
+}
+
+.flags h1 {
+  padding: 30px;
+}
+
+.flags .flags_img {
+  padding: 50px;
+}
+
+.flags .flags_img img {
+  width: 60px;
+  height: 60px;
+}
+
+.flags p {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.flags h2 {
+  color: orange;
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 25px;
+}
+
+.flags .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer {
+  background-color: #351503;
+  padding: 40px;
+}
+
+.footer_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: white;
+}
+
+.footer_content .footer_list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+}
+
+.footer_content .footer_list li {
+  margin: 0px 10px;
+}
+
+.modal {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(76, 74, 74, 0.5);
+  position: absolute;
+  top: 0px;
+}
+
+.modal .main_modal {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal_window {
+  width: 350px;
+  height: 350px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+}
+
+.modal .modal_window .modal_inp {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal .modal_window .modal_inp input {
+  height: 35px;
+  width: 250px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.modal .modal_window button {
+  width: 120px;
+  height: 30px;
+  font-size: 15px;
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,171 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'scss/main.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>{% block title %} {% endblock %}</title>
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="nav_content">
+                <div class="nav_title">
+                    <a href="{% url 'main' %}"><img src="{% static 'IMG/logo-small.png' %}" alt=""></a>
+                    
+                </div>
+                <ul>
+                    <li><a href="{% url 'main' %}">Home</a></li>
+                    <li><a href="{% url 'basket' %}">Basket</a></li>
+                    <i class="fa-brands fa-facebook-square"></i>
+                    <i class="fa-brands fa-twitter-square"></i>
+                    <form action="{% url 'search_ingredients' %}"  method="POST">
+                        {% csrf_token %}
+                        <input type="text" name="search_ingredients" aria-label="Search" placeholder="search">
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      {% block content %}
+    
+
+      {% endblock %}
+
+      <section>
+        <div class="container">
+            <div class="flags">
+                <h1>Browse Country</h1>
+                <div class="flags_img">
+                    <!-- <a href=""><img src="{% static 'IMG/England.webp' %}" alt=""></a> -->
+                    <a href="{% url 'filter_by_area' pk=1 %}"><img src="https://www.themealdb.com/images/icons/flags/big/64/gb.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/us.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/fr.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/ca.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/jm.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/cn.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/nl.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/eg.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/gr.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/in.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/ie.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/it.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/jp.png " alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/kn.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/my.png " alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/ma.png" alt=""></a> <br>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/hr.png" alt=""></a> 
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/no.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/pt.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/ru.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/ar.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/es.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/sk.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/th.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/sa.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/vn.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/tr.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/sy.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/dz.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/tn.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/pl.png" alt=""></a>
+                    <a href=""><img src="https://www.themealdb.com/images/icons/flags/big/64/mx.png" alt=""></a>
+                    <!-- <a href=""><img src="" alt=""></a>
+                    <a href=""><img src="" alt=""></a> -->
+                </div>
+                <p>Browse By Name</p>
+                <div class="link">
+                    <a href="{% url 'letter' pk=1 %}"><h2>A /</h2></a>
+                    <a href="{% url 'letter' pk=2 %}"><h2>B /</h2></a>
+                    <a href="{% url 'letter' pk=3 %}"><h2>C /</h2></a>
+                    <a href="{% url 'letter' pk=4 %}"><h2>D /</h2></a>
+                    <a href="{% url 'letter' pk=5 %}"><h2>E /</h2></a>
+                    <a href="{% url 'letter' pk=6 %}"><h2>F /</h2></a>
+                    <a href="{% url 'letter' pk=7 %}"><h2>G /</h2></a>
+                    <a href="{% url 'letter' pk=8 %}"><h2>H /</h2></a>
+                    <a href="{% url 'letter' pk=9 %}"><h2>I /</h2></a>
+                    <a href="{% url 'letter' pk=10 %}"><h2>G /</h2></a>
+                    <a href="{% url 'letter' pk=11 %}"><h2>K /</h2></a>
+                    <a href="{% url 'letter' pk=12 %}"><h2>L /</h2></a>
+                    <a href="{% url 'letter' pk=13 %}"><h2>M /</h2></a>
+                    <a href="{% url 'letter' pk=14 %}"><h2>N /</h2></a>
+                    <a href="{% url 'letter' pk=15 %}"><h2>O /</h2></a>
+                    <a href="{% url 'letter' pk=16 %}"><h2>P /</h2></a>
+                    <a href="{% url 'letter' pk=17 %}"><h2>Q /</h2></a>
+                    <a href="{% url 'letter' pk=18 %}"><h2>R /</h2></a>
+                    <a href="{% url 'letter' pk=19 %}"><h2>W /</h2></a>
+                    <a href="{% url 'letter' pk=20 %}"><h2>Z /</h2></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer_content">
+            <div class="footer_text">
+                <p>© 2022 TheMealDB</p>
+                <p>Proudly built in the UK </p>
+            </div>
+            <div class="footer_logo">
+                <img src="{% static 'IMG/footer_logo-tcdb.png' %}" alt="">
+                <img src="{% static 'IMG/logo-tadb.png' %}" alt="">
+                <img src="{% static 'IMG/logo-footer.png' %}" alt="">
+            </div>
+            <ul class="footer_list">
+                <li>About</li>
+                <li>Fag</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        </div>
+    </footer>
+    <div class="modal">
+        <div class="container">
+            <div class="main_modal">
+            <div class="modal_window">
+                <div class="modal_content">
+                    <form class="modal_inp">
+                    <input type="text" placeholder="FirstName">
+                    <input type="text" placeholder="LastName">
+                    <input type="email" placeholder="email">
+                    <input type="password" placeholder="password">
+                    <button class="modal_btn">Войти</button>
+                </form>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <script>
+        let login = document.querySelector('.login')
+let register = document.querySelector('.register')
+let modal = document.querySelector('.modal')
+let btn = document.querySelector('.modal_btn') 
+
+modal.style.display = 'none'
+
+login.addEventListener( 'click', () =>{
+    modal.style.display = 'block'
+    btn.innerHTML = 'Войти' 
+})
+
+
+register.addEventListener( 'click', () =>{
+    modal.style.display = 'block'
+    btn.innerHTML = 'Регистрация' 
+})
+
+modal.addEventListener('click', () =>{
+    modal.style.display = 'none'
+})
+    </script>
+</body>
+
+</html>

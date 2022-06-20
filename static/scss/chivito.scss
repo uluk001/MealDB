@@ -1,0 +1,111 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body{
+    background-color: rgb(71, 28, 5);
+}
+
+header{
+    color: white;
+    .chivito{
+        display: flex;
+        .chivito_content{
+            h2{
+                text-align: center;
+                padding: 30px;
+            }
+        .chivito_img{
+            display: block;
+            img{
+                width: 420px;
+                height: 420px;
+            }
+        }
+    }
+        .header_ingredients{
+            width: 100%;
+            h2{
+                text-align: center;
+                padding: 30px 0px;
+            }
+            .section_cards{
+                display: flex;
+                flex-wrap: wrap;
+                padding: 35px 30px;
+                .card{
+                    img{
+                        width: 210px;
+                        height: 215px;
+                        margin: 15px 15px;
+                    }
+                    p{
+                        text-align: center;
+                        color: orange   ;
+                    }
+                    
+                }
+            }
+        }
+        .chivito_icon{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            p{
+                padding: 30px 0px 10px 0px;
+            }
+            a{
+                i{
+                    color: orange;
+                }
+            }
+        }
+    }
+}
+
+// ! instructions
+
+.add_to_cart{
+    align-items: center;
+    margin-left: 250px;
+    a{
+        background-color: #12a4d9;
+        padding: 10px 20px;
+        border: none;
+        font-size: 19px;
+        font-family: serif;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    a:hover{
+        background-color: #ffffff;
+        padding: 10px 20px;
+        font-size: 20px;
+        font-family: serif;
+        box-shadow: rgba(0, 0, 0, 0.5)0px 0px 5px 5px;
+        border-radius: 3px;
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+
+
+.instructions{
+    text-align: center;
+    color: white;
+    h2{
+        padding: 30px;
+    }
+    p{
+        padding-bottom: 70px;
+    }
+}

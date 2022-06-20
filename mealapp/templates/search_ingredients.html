@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} TheMealDB{% endblock %}
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="section_popular">
+        <h1>Searched meal</h1>
+        <div class="section_cards">
+            {% for y,a,id in total %}
+            <div class="card">
+                <a href="{% url 'second_site' pk=id %}"><img src="{{y}}" alt=""></a> 
+                <a href="{% url 'second_site' pk=id %}"><h3>{{a}}</h3></a> 
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

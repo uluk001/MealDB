@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'scss/chivito.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>MealDB</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="chivito">
+                <div class="chivito_content">
+            <div class="chivito_img">
+                <h2>{{name}}</h2>
+                <img src="{{iimg}}" alt="">
+            </div>
+            <div class="chivito_icon">
+                <p>{{tags}}</p>
+                <div class="add_to_cart">
+                    <a href="{% url 'addToCart' id=id %}">Add to card</a>
+                </div>
+                <div> 
+                <a href=""><i class="fa-solid fa-angle-left fa-10x"></i></a>
+                <a href=""><i class="fa-solid fa-angle-right fa-10x"></i></a>
+            </div>
+            </div>
+        </div>
+            <div class="header_ingredients">
+                <h2>Ingredients</h2>
+                <div class="section_cards">
+                    {% for r, t, w in gotovka %}
+                    <div class="card">
+                        <img src="{{w}}" alt="">
+                        <p>{{r}} {{t}}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="instructions">
+                <h2>Instructions</h2>
+                <p>{{instruction}}</p>
+            </div>
+        </div>
+    </section>

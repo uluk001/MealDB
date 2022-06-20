@@ -1,0 +1,133 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  background-color: #471c05;
+}
+
+header {
+  color: white;
+}
+
+header .chivito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .chivito .chivito_content h2 {
+  text-align: center;
+  padding: 30px;
+}
+
+header .chivito .chivito_content .chivito_img {
+  display: block;
+}
+
+header .chivito .chivito_content .chivito_img img {
+  width: 420px;
+  height: 420px;
+}
+
+header .chivito .header_ingredients {
+  width: 100%;
+}
+
+header .chivito .header_ingredients h2 {
+  text-align: center;
+  padding: 30px 0px;
+}
+
+header .chivito .header_ingredients .section_cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 35px 30px;
+}
+
+header .chivito .header_ingredients .section_cards .card img {
+  width: 210px;
+  height: 215px;
+  margin: 15px 15px;
+}
+
+header .chivito .header_ingredients .section_cards .card p {
+  text-align: center;
+  color: orange;
+}
+
+header .chivito .chivito_icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .chivito .chivito_icon p {
+  padding: 30px 0px 10px 0px;
+}
+
+header .chivito .chivito_icon a i {
+  color: orange;
+}
+
+.add_to_cart {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 250px;
+}
+
+.add_to_cart a {
+  background-color: #12a4d9;
+  padding: 10px 20px;
+  border: none;
+  font-size: 19px;
+  font-family: serif;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.add_to_cart a:hover {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: serif;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 5px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px 5px;
+  border-radius: 3px;
+  text-decoration: none;
+  color: #000000;
+}
+
+.instructions {
+  text-align: center;
+  color: white;
+}
+
+.instructions h2 {
+  padding: 30px;
+}
+
+.instructions p {
+  padding-bottom: 70px;
+}
+/*# sourceMappingURL=chivito.css.map */
